@@ -1,0 +1,59 @@
+Uniform
+Stellenbosch & 1945 & 2 & All 1s & 10 (0.51\%) \\
+Stellenbosch & 1945 & 10 & All 1s & 45 (2.31\%) \\
+
+Stellenbosch & 1945 & 2 & All 1s & 10 (0.51\%) \\
+Stellenbosch & 1945 & 10 & All 1s & 42 (2.16\%) \\
+
+Stellenbosch & 1945 & 2 & All 1s & 10 (0.51\%) \\
+Stellenbosch & 1945 & 10 & All 1s & 43 (2.21\%) \\
+
+Stellenbosch & 1945 & 2 & All 1s & 10 (0.51\%) \\
+Stellenbosch & 1945 & 10 & All 1s & 43 (2.21\%) \\
+
+Stellenbosch & 1945 & 2 & All 1s & 10 (0.51\%) \\
+Stellenbosch & 1945 & 10 & All 1s & 43 (2.21\%) \\
+
+Weighted
+
+Stellenbosch & 1945 & 2 & Non uniform & 117 (0.41\%) \\
+Stellenbosch & 1945 & 10 & Non uniform & 568 (2.01\%) \\
+
+Stellenbosch & 1945 & 2 & Non uniform & 133 (0.41\%) \\
+Stellenbosch & 1945 & 10 & Non uniform & 559 (2.16\%) \\
+
+Stellenbosch & 1945 & 2 & Non uniform & 129 (0.46\%) \\
+Stellenbosch & 1945 & 10 & Non uniform & 548 (2.06\%) \\
+
+Stellenbosch & 1945 & 2 & Non uniform & 129 (0.41\%) \\
+Stellenbosch & 1945 & 10 & Non uniform & 586 (2.16\%) \\
+
+Stellenbosch & 1945 & 2 & Non uniform & 123 (0.46\%) \\
+Stellenbosch & 1945 & 10 & Non uniform & 566 (2.06\%) \\
+
+Uniform
+
+GRID TEST RESULTS:
+Grid Type  Size  Nodes  p Weights  Demand Coverage Graph Coverage
+   square 30x30    900  1  All 1s                5          0.56%
+   square 30x30    900  5  All 1s               25          2.78%
+   square 45x45   2025  3  All 1s               15          0.74%
+   square 45x45   2025 11  All 1s               55          2.72%
+      hex 30x30   1920  2  All 1s                8          0.42%
+      hex 30x30   1920 10  All 1s               40          2.08%
+      hex 45x45   4230  5  All 1s               20          0.47%
+      hex 45x45   4230 22  All 1s               88          2.08%
+
+Weighted
+
+GRID TEST RESULTS:
+Grid Type  Size  Nodes  p Weights  Demand Coverage Graph Coverage
+   square 30x30    900  1  Random               84          0.56%
+   square 30x30    900  5  Random              415          2.78%
+   square 45x45   2025  3  Random              274          0.74%
+   square 45x45   2025 11  Random              897          2.72%
+      hex 30x30   1920  2  Random              154          0.42%
+      hex 30x30   1920 10  Random              701          2.08%
+      hex 45x45   4230  5  Random              387          0.47%
+      hex 45x45   4230 22  Random             1552          2.08%
+

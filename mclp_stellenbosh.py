@@ -13,8 +13,7 @@ G = load_stellenbosch_graph()
 # loading points of interests (POIs)
 tags = {
     "amenity": ["school", "university", "library"],
-    "shop": True,
-    "building": ["residential", "apartments"]
+    "shop": ["mall", "supermarket"],
 }
 poi_nodes = get_poi_nodes(G, tags)
 

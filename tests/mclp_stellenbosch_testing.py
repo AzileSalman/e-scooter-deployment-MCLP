@@ -10,10 +10,10 @@ def run_stellenbosch_tests():
     weighted = input("Weighted (w) or uniform (u)? ").strip().lower() == 'w'
 
     G = load_stellenbosch_graph()
+
     poi_nodes = get_poi_nodes(G, tags={
-        'amenity': ['school', 'university', 'library'],
-        'shop': True,
-        'building': ['residential', 'apartments']
+        'amenity': ["school", "university", "library"],
+        'shop': ["mall", "supermarket"],
     })
 
     demand_points = list(G.nodes)
