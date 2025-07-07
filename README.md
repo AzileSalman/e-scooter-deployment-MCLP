@@ -8,8 +8,8 @@ The project investigates mathematical methods for determining **optimal deployme
 Ongoing – additional data visualisations will be added in July 2025 for the interim report.
 
 ## What’s Included
-- `stellenbosch_mclp.py`: Solves MCLP on Stellenbosch road network (case study)
-- `grid_tests.py`: Runs simulations on synthetic square and hexagonal grid networks
+- `mclp_stellenbosch.py`: Solves MCLP on Stellenbosch road network (case study)
+- `grid_graphs_testing.py` and `mclp_stellenbosch_testing: Tests the grid graph networks and the stellenbosch network respectively
 - Visualisation using `matplotlib`
 - Demand weighting using real and synthetic Points of Interest (POIs)
 
