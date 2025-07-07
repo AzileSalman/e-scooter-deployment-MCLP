@@ -4,19 +4,23 @@ from shapely.geometry import Point
 
 
 def load_stellenbosch_graph():
+    # loading stellenbosch street network
     G = ox.graph_from_place("Stellenbosch, South Africa", network_type="drive")
+    # converting graph to an undirected graph
     G = ox.convert.to_undirected(G)
+    # projecting graph to a metric coordinate system instead of lat/lon
     return ox.project_graph(G)
 
 
 def get_poi_nodes(G, tags):
-    # Get POIs from tags
+    # Getting the POIs from tags
     pois = ox.features_from_place("Stellenbosch, South Africa", tags)
+    # matching the coordinate system of the POIs to graph coordinate system
     pois = pois.to_crs(G.graph["crs"])
     pois["geometry"] = pois["geometry"].centroid
     poi_nodes_from_tags = pois["geometry"].apply(lambda g: ox.distance.nearest_nodes(G, g.x, g.y)).unique()
 
-    # Add known university residences manually via geocoding
+    # Adding known university residences manually 
     known_residences = [
         "Minerva, Stellenbosch", "Academia, Stellenbosch", "Metanoia, Stellenbosch",
         "Dagbreek, Stellenbosch", "Huis ten Bosch, Stellenbosch", "Helshoogte, Stellenbosch",
@@ -33,7 +37,7 @@ def get_poi_nodes(G, tags):
         except Exception as e:
             print(f"Could not geocode {name}: {e}")
 
-    # Convert to GeoDataFrame and match CRS
+    # converting to GeoDataFrame and matching CRS
     if res_coords:
         gdf = gpd.GeoDataFrame(geometry=res_coords, crs="EPSG:4326")
         gdf = gdf.to_crs(G.graph["crs"])
@@ -41,7 +45,7 @@ def get_poi_nodes(G, tags):
     else:
         res_nodes = []
 
-    # Combine and return unique node IDs
+    # Combining and returning unique node IDs
     all_poi_nodes = set(poi_nodes_from_tags).union(res_nodes)
     return list(all_poi_nodes)
 
