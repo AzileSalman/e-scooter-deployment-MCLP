@@ -19,7 +19,7 @@ def build_mclp_model(demand_points, facility_sites, coverage_sets, weights, p):
     model += pulp.lpSum(x[j] for j in facility_sites) <= p
     # solving model
     model.solve()
-    # extracting list of selected facilities (solution)
+    # extracting list of selected facilities
     selected = [j for j in facility_sites if x[j].value() == 1]
     # extracting list of covered demand points
     covered = [i for i in demand_points if y[i].value() == 1]

@@ -18,7 +18,7 @@ def plot_solution(G, selected_facilities, poi_nodes, output_path=None):
     ox.plot_graph(
         G_wgs84,
         node_color=node_colors,
-        node_size=20,
+        node_size=8.5,
         edge_color='gray',
         show=False,
         close=False,

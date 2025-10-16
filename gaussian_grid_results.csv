@@ -1,0 +1,5 @@
+Grid Type,Size,Nodes,p,Demand Type,Demand Coverage,Graph Coverage
+square,45x45,2025,3,Gaussian (σ=8.0),7.08%,7.38%
+square,45x45,2025,11,Gaussian (σ=8.0),24.37%,25.29%
+hex,45x45,2025,3,Gaussian (σ=8.0),9.43%,9.80%
+hex,45x45,2025,11,Gaussian (σ=8.0),32.74%,33.70%
